@@ -13,7 +13,7 @@
 ## Introduction
 
 <p float="left" align="middle">
-  <img src="./imgs/overview.png">
+  <img src="./imgs/overview.png" width="750">
 </p>
 
 We introduce Reward-Guided Speculative Decoding (RSD), a novel framework aimed at improving the efficiency of inference in large language models (LLMs). RSD employs a process reward model to evaluate intermediate decoding steps from draft model, and dynamically decide whether to invoke the target model, optimizing the trade-off between computational cost and output quality. Extensive evaluations on challenging reasoning benchmarks, including Olympiad-level tasks, show that RSD delivers **significant efficiency gains** against decoding with the target model only (up to **4.4x fewer FLOPs**), while achieving significant **better accuracy** than parallel decoding method on average (up to **+3.5**).
@@ -52,7 +52,7 @@ bash scripts/math_eval.sh
 ````
 
 ## Acknowledgement
-Our code base mainly builds on [Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math) and [skywork-o1-prm-inference](https://github.com/SkyworkAI/skywork-o1-prm-inference). Thank you for their open-source effort.
+Our code base mainly builds on [Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math) and [skywork-o1-prm-inference](https://github.com/SkyworkAI/skywork-o1-prm-inference).
 
 ## Citation
 ```
