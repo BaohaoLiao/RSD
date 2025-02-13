@@ -19,8 +19,8 @@
 We introduce Reward-Guided Speculative Decoding (RSD), a novel framework aimed at improving the efficiency of inference in large language models (LLMs). RSD employs a process reward model to evaluate intermediate decoding steps from draft model, and dynamically decide whether to invoke the target model, optimizing the trade-off between computational cost and output quality. Extensive evaluations on challenging reasoning benchmarks, including Olympiad-level tasks, show that RSD delivers **significant efficiency gains** against decoding with the target model only (up to **4.4x fewer FLOPs**), while achieving significant **better accuracy** than parallel decoding method on average (up to **+3.5**).
 
 ## Support
-- [x] vLLM online mode: Need at least 3 GPUs to serve the draft, target, and process reward model, since vLLM doesn't support serving multiple models on 1 GPU.
-- [ ] vLLM offline mode: Only need 1 GPU, but slower than the online mode, since we only serve the model when needed, then delete it for serving another one.
+- [x] **vLLM online mode**: Need at least 3 GPUs to serve the draft, target, and process reward model, since vLLM doesn't support serving multiple models on 1 GPU.
+- [ ] **vLLM offline mode**: Only need 1 GPU, but slower than the online mode, since we only serve the model when needed, then delete it for serving another one.
 
 
 ## Installation
@@ -37,7 +37,7 @@ pip install -e .
 ## Efficient Decoding
 **1. Preparation**
 
-We mainly use [Qwen2.5-Math family](https://huggingface.co/collections/Qwen/qwen25-math-66eaa240a1b7d5ee65f1da3e) and [Skywork-o1-Open-PRM-Qwen-2.5-1.5B](https://huggingface.co/Skywork/Skywork-o1-Open-PRM-Qwen-2.5-1.5B). You need to change **max_position_embeddings** in their config.json from 4096 to 16384, which aims to avoid max_tokens error in vLLM. We only use the generation shorter than 4096, so this change won't affect the performance.
+We mainly use [Qwen2.5-Math family](https://huggingface.co/collections/Qwen/qwen25-math-66eaa240a1b7d5ee65f1da3e) and [Skywork-o1-Open-PRM-Qwen-2.5-1.5B](https://huggingface.co/Skywork/Skywork-o1-Open-PRM-Qwen-2.5-1.5B). You need to change ``max_position_embeddings`` in their config.json from 4096 to 16384, which aims to avoid max_tokens error in vLLM. We only use the generation shorter than 4096, so this change won't affect the performance.
 
 **2. Model serve**
 ```shell
