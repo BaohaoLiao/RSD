@@ -1,5 +1,5 @@
 <h3 align="center">
-    <p>Reward-Guided Speculative Decoding (RSD) for Efficient LLM Reasoning</p>
+    <p style="font-size: 22px;">Reward-Guided Speculative Decoding (RSD) for Efficient LLM Reasoning</p>
 </h3>
 
 <h5 align="center">
@@ -11,9 +11,11 @@
 
 
 ## Introduction
+
 <p float="left" align="middle">
   <img src="./imgs/overview.png">
 </p>
+
 We introduce Reward-Guided Speculative Decoding (RSD), a novel framework aimed at improving the efficiency of inference in large language models (LLMs). RSD employs a process reward model to evaluate intermediate decoding steps from draft model, and dynamically decide whether to invoke the target model, optimizing the trade-off between computational cost and output quality. Extensive evaluations on challenging reasoning benchmarks, including Olympiad-level tasks, show that RSD delivers **significant efficiency gains** against decoding with the target model only (up to **4.4x fewer FLOPs**), while achieving significant **better accuracy** than parallel decoding method on average (up to **+3.5**).
 
 ## Support
