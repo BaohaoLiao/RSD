@@ -1,6 +1,6 @@
-<h3 align="center">
-    <p style="font-size: 28px;">Reward-Guided Speculative Decoding (RSD) for Efficient LLM Reasoning</p>
-</h3>
+<div align="center">
+    <h1>Reward-Guided Speculative Decoding (RSD) for Efficient LLM Reasoning</h1>
+</div>
 
 <h5 align="center">
 
@@ -8,6 +8,7 @@
  <br>
 
 </h5>
+
 
 
 ## Introduction
