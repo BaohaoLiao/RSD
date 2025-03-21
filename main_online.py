@@ -114,13 +114,13 @@ def setup(args):
     openai_api_key = "EMPTY"
     draft_client = OpenAI(
         api_key=openai_api_key,
-        base_url=args.draft_model_name_or_path,
+        base_url=args.draft_model_ip_address,
     )
     draft_tokenizer = AutoTokenizer.from_pretrained(args.draft_model_name_or_path, trust_remote_code=True)
 
     target_client = OpenAI(
         api_key=openai_api_key,
-        base_url=args.target_model_name_or_path,
+        base_url=args.target_model_ip_address,
     )
     target_tokenizer = AutoTokenizer.from_pretrained(args.target_model_name_or_path, trust_remote_code=True)
 
