@@ -21,7 +21,9 @@ We introduce Reward-Guided Speculative Decoding (RSD), a novel framework aimed a
 
 ## Support
 - [x] **vLLM online mode**: Need at least 3 GPUs to serve the draft, target, and process reward model, since vLLM doesn't support serving multiple models on 1 GPU.
-- [ ] **vLLM offline mode**: Only need 1 GPU, but slower than the online mode, since we only serve the model when needed, then delete it for serving another one.
+
+## News
+- [2025/05/01] 🎊 RSD is accepted to ICML2025 as a poster 
 
 
 ## Installation
